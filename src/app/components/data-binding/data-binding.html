@@ -1,0 +1,18 @@
+<p>data-binding works!</p>
+<table>
+  <tr>
+    <td> {{courseName}}</td>
+    <td>{{productPrice}}</td>
+  </tr>
+  <tr>
+    <td>
+        <input type="text"  value="{{courseName}}"/>
+    </td>
+    <td>
+        <input [type]="inputType" [max]="maxlenght" [minLength]="minlenght"/>
+    </td>
+    <td>
+        <p [class]="textColor"> Bienvenue au developpement avec angular</p>
+    </td>
+  </tr>
+</table>
