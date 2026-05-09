@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './admin.html',
   styleUrl: './admin.css',
 })
-export class Admin {}
+export class Admin {
+  firstName = "Mugisha"
+
+  courseName="Angular 20 course"
+}
