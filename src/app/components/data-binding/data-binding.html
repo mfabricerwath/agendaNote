@@ -1,5 +1,6 @@
 <p>data-binding works!</p>
 <table>
+  <tbody>
   <tr>
     <td> {{courseName}}</td>
     <td>{{productPrice}}</td>
@@ -15,4 +16,10 @@
         <p [class]="textColor"> Bienvenue au developpement avec angular</p>
     </td>
   </tr>
+  <tr>
+    <td>
+      <input type="text" [(ngModel)]="courseName">
+    </td>
+  </tr>
+  <tbody>
 </table>
