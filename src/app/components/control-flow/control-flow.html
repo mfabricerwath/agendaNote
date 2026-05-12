@@ -1,0 +1,105 @@
+
+<table>
+  <tbody> 
+    <tr>
+      <td>
+        @if (isPagraphVisible === true) {
+          <p>this is a paragraphe</p>
+        } @else {
+          <h3>this isParagraph has a false value</h3>
+        }
+      </td>
+   
+      <td>
+        <button (click)="showP()">show p</button>
+      </td>
+   
+      <td>
+        <button (click)="hideP()">hide p</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        @if (startMonthName === 'jan') {
+          <span>January</span>
+        } @else if (startMonthName === 'feb') {
+          <span>February</span>
+        } @else if (startMonthName === 'mar') {
+          <span>March</span>
+        } @else if (startMonthName === 'apr') {
+          <span>April</span>
+        } @else if (startMonthName === 'may') {
+          <span>May</span>
+        } @else if (startMonthName === 'jun') {
+          <span>June</span>
+        } @else if (startMonthName === 'jul') {
+          <span>July</span>
+        } @else if (startMonthName === 'aug') {
+          <span>August</span>
+        } @else if (startMonthName === 'sep') {
+          <span>September</span>
+        } @else if (startMonthName === 'oct') {
+          <span>October</span>
+        } @else if (startMonthName === 'nov') {
+          <span>November</span>
+        } @else if (startMonthName === 'dec') {
+          <span>December</span>
+        } @else {
+          <span>no such month</span>
+        }
+      </td>
+    
+      <td>
+        <input type="text" [(ngModel)]="startMonthName" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <ul>
+          @for (item of cities; track $index) {
+            <li>{{item}}</li>
+          }
+        </ul>
+      </td>
+      <td>
+        <select name="" id="">
+          @for (item of cities; track $index) {
+            <option value="">{{item}}</option>
+          }
+        </select>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Serial no</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Degree</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of student; track $index) {
+    <tr>
+      <td>{{$index+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.country}}</td>
+      <td>{{item.degree}}</td>
+      <td>
+        @if (item.status == true){
+            <h3>ACTIVE</h3>
+        }@else {
+          <h3>DE-ACTIVE</h3>
+        }
+        </td>
+    </tr>
+  }
+  </tbody>
+</table>
