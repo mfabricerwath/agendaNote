@@ -1,22 +1,46 @@
 <div class="row">
-    <div class="col-3">
+    <div class="col-5">
         <div class="p-3" [ngClass]="bgClassName()">
             DIV 1 {{bgClassName()}}
         </div>
         
     </div>
-    <div class="col-3">
+    <div class="col-5">
         <div class="p-3" [ngStyle]="{'background-color':isDiv2Green==true ? 'blue':'red'}">
             DIV 2
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-3">
+    <div class="col-5">
         <button class="btn btn-success" (click)="setbgclass('bg-success')">Green</button>
         <button class="btn btn-danger" (click)="setbgclass('bg-danger')">Red</button>
     </div>
-    <div class="col-3">
+    <div class="col-5">
         <button class="btn btn-success" (click)="toggleDiv2Color()">Green</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        <p>First Name: {{firstName}}</p>
+        <p>First Name: {{firstName | uppercase}}</p>
+    </div>
+
+    <div class="col-3">
+        <p>list Numbers: {{NumbersList | slice:0:5}}</p>
+        <br>
+        <p>listnumbers: {{NumbersList | slice:5}}</p>
+        <br>
+        <p>Upper course Name: {{courseName | titlecase}}</p>
+    </div>
+    <div class="col-3">
+        <p>Course Name: {{courseName |titlecase}}</p>
+        <p>Numbers list: {{studentsList|json}}</p>
+    </div>
+
+     <div class="col-2">
+        current Date: {{currentDate | date:'fullDate'}} 
+        <br>
+        current Time: {{currentDate | date:'dd-MM-yyyy'}}
     </div>
 </div>
